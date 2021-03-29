@@ -602,6 +602,8 @@ class Game(object):
 @ATTRIBUTE score numeric
 @ATTRIBUTE pacman_posX numeric
 @ATTRIBUTE pacman_posY numeric
+@ATTRIBUTE nextScore numeric
+
 @ATTRIBUTE pacman_dir {North, South, West, East, Stop}
 
 @DATA

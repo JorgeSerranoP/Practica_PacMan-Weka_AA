@@ -151,8 +151,17 @@ class BustersAgent(object):
         # Pacman position
         data = ',' .join(map(str, gameState.getPacmanPosition()))
         msg += data + ","
+        # Next score
+        for ghostDistance1 in gameState.data.ghostDistances:
+            if ghostDistance1 != None and ghostDistance1 == 1:
+                msg += str(gameState.getScore() + 200)
+                return msg
+        if gameState.getDistanceNearestFood() == 1:
+            msg += str(gameState.getScore() + 100)
+        else:
+            msg += str(gameState.getScore() - 1)
         # Pacman direction
-        msg += str(gameState.data.agentStates[0].getDirection())
+        msg += str(gameState.data.agentStates[0].getDirection()) + ","
         return msg
 
 
