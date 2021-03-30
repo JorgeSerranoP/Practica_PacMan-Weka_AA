@@ -154,14 +154,18 @@ class BustersAgent(object):
         # Next score
         for ghostDistance1 in gameState.data.ghostDistances:
             if ghostDistance1 != None and ghostDistance1 == 1:
-                msg += str(gameState.getScore() + 200)
+                # 200 - 1 por el tick del movimiento hacia el fantasma
+                msg += str(gameState.getScore() + 199) + ","
+                # Pacman direction
+                msg += str(self.chooseAction(gameState))
                 return msg
         if gameState.getDistanceNearestFood() == 1:
-            msg += str(gameState.getScore() + 100)
+            # 100 - 1 por el tick del movimiento hacia la comida
+            msg += str(gameState.getScore() + 99) + ","
         else:
-            msg += str(gameState.getScore() - 1)
+            msg += str(gameState.getScore() - 1) + ","
         # Pacman direction
-        msg += str(gameState.data.agentStates[0].getDirection()) + ","
+        msg += str(self.chooseAction(gameState))
         return msg
 
 
@@ -347,8 +351,8 @@ class BasicAgentAA(BustersAgent):
         posicion_array = 0
         for x in range(0, gameState.getNumAgents() - 1):
             if gameState.data.ghostDistances[x] == None:
-                gameState.data.ghostDistances[x] = 3000
-            elif gameState.data.ghostDistances[x] < distancia_menor:
+                gameState.data.ghostDistances[x] = -1
+            elif gameState.data.ghostDistances[x] < distancia_menor and gameState.data.ghostDistances[x] != -1:
                 distancia_menor = gameState.data.ghostDistances[x]
                 posicion_array = x
         posicionFantasma = gameState.getGhostPositions()[posicion_array]
@@ -569,3 +573,48 @@ class BasicAgentAA(BustersAgent):
                 move = Directions.EAST
                 prevMove = "east"
                 return move
+
+    def printLineData(self, gameState):
+        msg = ""
+        # Living ghost
+        for livingGhost in gameState.getLivingGhosts():
+            msg += str(livingGhost) + ","
+        # Ghost position
+        for i in range(0, gameState.getNumAgents() - 1):
+            data = ','.join(map(str, gameState.getGhostPositions()[i]))
+            msg += data + ","
+        # Ghost direction
+        data = ','.join(map(str, [gameState.getGhostDirections().get(
+            i) for i in range(0, gameState.getNumAgents() - 1)]))
+        msg += data + ","
+        # Ghost distance
+        for ghostDistance in gameState.data.ghostDistances:
+            if ghostDistance == None:
+                ghostDistance = -1
+            msg += str(ghostDistance) + ","
+        # Dot distance
+        if gameState.getDistanceNearestFood() == None:
+            msg += str(-1) + ","
+        else:
+            msg += str(gameState.getDistanceNearestFood()) + ","
+        # Score
+        msg += str(gameState.getScore()) + ","
+        # Pacman position
+        data = ',' .join(map(str, gameState.getPacmanPosition()))
+        msg += data + ","
+        # Next score
+        for ghostDistance1 in gameState.data.ghostDistances:
+            if ghostDistance1 != None and ghostDistance1 == 1:
+                # 200 - 1 por el tick del movimiento hacia el fantasma
+                msg += str(gameState.getScore() + 199) + ","
+                # Pacman direction
+                msg += str(self.chooseAction(gameState))
+                return msg
+        if gameState.getDistanceNearestFood() == 1:
+            # 100 - 1 por el tick del movimiento hacia la comida
+            msg += str(gameState.getScore() + 99) + ","
+        else:
+            msg += str(gameState.getScore() - 1) + ","
+        # Pacman direction
+        msg += str(self.chooseAction(gameState))
+        return msg
