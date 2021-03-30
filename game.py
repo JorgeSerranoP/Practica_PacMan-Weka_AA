@@ -574,7 +574,7 @@ class Game(object):
         self.agentTimeout = False
         import io
         self.agentOutput = [io.StringIO() for agent in agents]
-        self.output_file = open("all_data_pacman.arff", 'a')
+        self.output_file = open("test_othermaps_keyboard.arff", 'a')
         self.output_file.write('''@RELATION  stateData
 
 @ATTRIBUTE living_pacman {False}
