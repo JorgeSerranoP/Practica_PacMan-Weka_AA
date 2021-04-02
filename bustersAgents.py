@@ -148,15 +148,17 @@ class BustersAgent(object):
             msg += str(gameState.getDistanceNearestFood()) + ","
         # Score
         msg += str(gameState.getScore()) + ","
-        # Pacman position
-        data = ',' .join(map(str, gameState.getPacmanPosition()))
-        msg += data + ","
         # Next score
         for ghostDistance1 in gameState.data.ghostDistances:
             if ghostDistance1 != None and ghostDistance1 == 1:
                 # 200 - 1 por el tick del movimiento hacia el fantasma
                 msg += str(gameState.getScore() + 199) + ","
+                # Pacman position
+                data = ',' .join(map(str, gameState.getPacmanPosition()))
+                msg += data + ","
                 # Pacman direction
+                msg += str(gameState.data.agentStates[0].getDirection()) + ","
+                # Pacman action
                 msg += str(self.chooseAction(gameState))
                 return msg
         if gameState.getDistanceNearestFood() == 1:
@@ -164,7 +166,12 @@ class BustersAgent(object):
             msg += str(gameState.getScore() + 99) + ","
         else:
             msg += str(gameState.getScore() - 1) + ","
+        # Pacman position
+        data = ',' .join(map(str, gameState.getPacmanPosition()))
+        msg += data + ","
         # Pacman direction
+        msg += str(gameState.data.agentStates[0].getDirection()) + ","
+        # Pacman action
         msg += str(self.chooseAction(gameState))
         return msg
 
@@ -599,15 +606,17 @@ class BasicAgentAA(BustersAgent):
             msg += str(gameState.getDistanceNearestFood()) + ","
         # Score
         msg += str(gameState.getScore()) + ","
-        # Pacman position
-        data = ',' .join(map(str, gameState.getPacmanPosition()))
-        msg += data + ","
         # Next score
         for ghostDistance1 in gameState.data.ghostDistances:
             if ghostDistance1 != None and ghostDistance1 == 1:
                 # 200 - 1 por el tick del movimiento hacia el fantasma
                 msg += str(gameState.getScore() + 199) + ","
+                # Pacman position
+                data = ',' .join(map(str, gameState.getPacmanPosition()))
+                msg += data + ","
                 # Pacman direction
+                msg += str(gameState.data.agentStates[0].getDirection()) + ","
+                # Pacman action
                 msg += str(self.chooseAction(gameState))
                 return msg
         if gameState.getDistanceNearestFood() == 1:
@@ -615,6 +624,11 @@ class BasicAgentAA(BustersAgent):
             msg += str(gameState.getScore() + 99) + ","
         else:
             msg += str(gameState.getScore() - 1) + ","
+        # Pacman position
+        data = ',' .join(map(str, gameState.getPacmanPosition()))
+        msg += data + ","
         # Pacman direction
+        msg += str(gameState.data.agentStates[0].getDirection()) + ","
+        # Pacman action
         msg += str(self.chooseAction(gameState))
         return msg

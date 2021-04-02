@@ -574,7 +574,7 @@ class Game(object):
         self.agentTimeout = False
         import io
         self.agentOutput = [io.StringIO() for agent in agents]
-        self.output_file = open("test_othermaps_tutorial1.arff", 'a')
+        self.output_file = open("1.arff", 'a')
         self.output_file.write('''@RELATION  stateData
 
 @ATTRIBUTE living_pacman {False}
@@ -582,14 +582,14 @@ class Game(object):
 @ATTRIBUTE living_ghost2 {True, False}
 @ATTRIBUTE living_ghost3 {True, False}
 @ATTRIBUTE living_ghost4 {True, False}
-@ATTRIBUTE ghost_pos1 numeric
-@ATTRIBUTE ghost_pos2 numeric
-@ATTRIBUTE ghost_pos3 numeric
-@ATTRIBUTE ghost_pos4 numeric
-@ATTRIBUTE ghost_pos5 numeric
-@ATTRIBUTE ghost_pos6 numeric
-@ATTRIBUTE ghost_pos7 numeric
-@ATTRIBUTE ghost_pos8 numeric
+@ATTRIBUTE ghost_posX1 numeric
+@ATTRIBUTE ghost_posY1 numeric
+@ATTRIBUTE ghost_posX2 numeric
+@ATTRIBUTE ghost_posY2 numeric
+@ATTRIBUTE ghost_posX3 numeric
+@ATTRIBUTE ghost_posY3 numeric
+@ATTRIBUTE ghost_posX4 numeric
+@ATTRIBUTE ghost_posY4 numeric
 @ATTRIBUTE ghost_dir1 {North, South, West, East, Stop}
 @ATTRIBUTE ghost_dir2 {North, South, West, East, Stop}
 @ATTRIBUTE ghost_dir3 {North, South, West, East, Stop}
@@ -600,11 +600,12 @@ class Game(object):
 @ATTRIBUTE ghost_dist4 numeric
 @ATTRIBUTE dot_dist numeric
 @ATTRIBUTE score numeric
+@ATTRIBUTE nextScore numeric
 @ATTRIBUTE pacman_posX numeric
 @ATTRIBUTE pacman_posY numeric
-@ATTRIBUTE nextScore numeric
-
 @ATTRIBUTE pacman_dir {North, South, West, East, Stop}
+
+@ATTRIBUTE pacman_action {North, South, West, East, Stop}
 
 @DATA
 ''')
