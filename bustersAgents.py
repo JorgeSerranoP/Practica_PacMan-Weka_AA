@@ -3,6 +3,8 @@ import sys
 import random
 from distanceCalculator import Distancer
 from game import Actions
+
+from wekaI import Weka
 # bustersAgents.py
 # ----------------
 # Licensing Information:  You are free to use or extend these projects for
@@ -89,6 +91,8 @@ class BustersAgent(object):
         self.inferenceModules = [inferenceType(a) for a in ghostAgents]
         self.observeEnable = observeEnable
         self.elapseTimeEnable = elapseTimeEnable
+        self.weka = Weka()
+        self.weka.start_jvm()
 
     def registerInitialState(self, gameState):
         "Initializes beliefs and inference modules"
@@ -350,236 +354,46 @@ class BasicAgentAA(BustersAgent):
     def chooseAction(self, gameState):
         self.countActions = self.countActions + 1
         self.printInfo(gameState)
-        move = Directions.STOP
-        legal = gameState.getLegalActions(0)  # Legal position from the pacman
-        global prevMove
+        legal = gameState.getLegalActions(0)
+        x = [str(gameState.getLivingGhosts()[1]), str(gameState.getLivingGhosts()[2]), str(gameState.getLivingGhosts()[3]), str(gameState.getLivingGhosts()[4]),
+             gameState.getGhostPositions()[0][0], gameState.getGhostPositions()[0][1], gameState.getGhostPositions()[1][0], gameState.getGhostPositions()[1][1], gameState.getGhostPositions()[2][0], gameState.getGhostPositions()[2][1], gameState.getGhostPositions()[3][0], gameState.getGhostPositions()[3][1], str(gameState.getGhostDirections().get(0)), str(
+                 gameState.getGhostDirections().get(1)), str(gameState.getGhostDirections().get(2)),
+             str(gameState.getGhostDirections().get(
+                 3)), self.ghostDistance1(gameState), self.ghostDistance2(gameState), self.ghostDistance3(gameState),
+             self.ghostDistance4(gameState), self.dotDistance(gameState), gameState.getScore(), gameState.getPacmanPosition()[0], gameState.getPacmanPosition()[1], str(gameState.data.agentStates[0].getDirection())]
+        move = self.weka.predict("./J48.model", x,
+                                 "./training_tutorial1_removed.arff", legal)
+        return move
 
-        distancia_menor = 3000
-        posicion_array = 0
-        for x in range(0, gameState.getNumAgents() - 1):
-            if gameState.data.ghostDistances[x] == None:
-                gameState.data.ghostDistances[x] = -1
-            elif gameState.data.ghostDistances[x] < distancia_menor and gameState.data.ghostDistances[x] != -1:
-                distancia_menor = gameState.data.ghostDistances[x]
-                posicion_array = x
-        posicionFantasma = gameState.getGhostPositions()[posicion_array]
-        posicionPacMan = gameState.getPacmanPosition()
+    def ghostDistance1(self, gameState):
+        msg = -1
+        if gameState.data.ghostDistances[0] != None:
+            msg = gameState.data.ghostDistances[0]
+        return msg
 
-        # NORTH-EAST
-        if(posicionPacMan[1] < posicionFantasma[1] and posicionPacMan[0] < posicionFantasma[0]):
-            if(prevMove == "south" and Directions.SOUTH in legal):
-                move = Directions.SOUTH
-                prevMove = "south"
-                return move
-            if(Directions.NORTH in legal and prevMove != "south"):
-                move = Directions.NORTH
-                prevMove = "north"
-                return move
-            if(Directions.WEST in legal and prevMove == "west"):
-                move = Directions.WEST
-                prevMove = "west"
-                return move
-            if(Directions.EAST in legal and prevMove != "west"):
-                move = Directions.EAST
-                prevMove = "east"
-                return move
-            elif(Directions.WEST in legal):
-                move = Directions.WEST
-                prevMove = "west"
-                return move
-            elif(Directions.SOUTH in legal):
-                move = Directions.SOUTH
-                prevMove = "south"
-                return move
+    def ghostDistance2(self, gameState):
+        msg = -1
+        if gameState.data.ghostDistances[1] != None:
+            msg = gameState.data.ghostDistances[1]
+        return msg
 
-        # NORTH-WEST
-        if(posicionPacMan[1] < posicionFantasma[1] and posicionPacMan[0] > posicionFantasma[0]):
-            if(prevMove == "south" and Directions.SOUTH in legal):
-                move = Directions.SOUTH
-                prevMove = "south"
-                return move
-            if(Directions.NORTH in legal and prevMove != "south"):
-                move = Directions.NORTH
-                prevMove = "north"
-                return move
-            if(prevMove == "east" and Directions.EAST in legal):
-                move = Directions.EAST
-                prevMove = "east"
-                return move
-            if(Directions.WEST in legal and prevMove != "east"):
-                move = Directions.WEST
-                prevMove = "west"
-                return move
-            elif(Directions.EAST in legal):
-                move = Directions.EAST
-                prevMove = "east"
-                return move
-            elif(Directions.SOUTH in legal):
-                move = Directions.SOUTH
-                prevMove = "south"
-                return move
+    def ghostDistance3(self, gameState):
+        msg = -1
+        if gameState.data.ghostDistances[2] != None:
+            msg = gameState.data.ghostDistances[2]
+        return msg
 
-        # SOUTH-EAST
-        if(posicionPacMan[1] > posicionFantasma[1] and posicionPacMan[0] < posicionFantasma[0]):
-            if(Directions.NORTH in legal and prevMove == "north"):
-                move = Directions.NORTH
-                prevMove = "north"
-                return move
-            if(Directions.SOUTH in legal and prevMove != "north"):
-                move = Directions.SOUTH
-                prevMove = "south"
-                return move
-            if(Directions.WEST in legal and prevMove == "west"):
-                move = Directions.WEST
-                prevMove = "west"
-                return move
-            if(Directions.EAST in legal and prevMove != "west"):
-                move = Directions.EAST
-                prevMove = "east"
-                return move
-            elif(Directions.WEST in legal):
-                move = Directions.WEST
-                prevMove = "west"
-                return move
-            elif(Directions.NORTH in legal):
-                move = Directions.NORTH
-                prevMove = "north"
-                return move
+    def ghostDistance4(self, gameState):
+        msg = -1
+        if gameState.data.ghostDistances[3] != None:
+            msg = gameState.data.ghostDistances[3]
+        return msg
 
-        # SOUTH-WEST
-        if(posicionPacMan[1] > posicionFantasma[1] and posicionPacMan[0] > posicionFantasma[0]):
-            if(prevMove == "north" and Directions.NORTH in legal):
-                move = Directions.NORTH
-                prevMove = "north"
-                return move
-            if(Directions.SOUTH in legal and prevMove != "north"):
-                move = Directions.SOUTH
-                prevMove = "south"
-                return move
-            if(prevMove == "east" and Directions.EAST in legal):
-                move = Directions.EAST
-                prevMove = "east"
-                return move
-            if(Directions.WEST in legal and prevMove != "east"):
-                move = Directions.WEST
-                prevMove = "west"
-                return move
-            elif(Directions.EAST in legal):
-                move = Directions.EAST
-                prevMove = "east"
-                return move
-            elif(Directions.NORTH in legal):
-                move = Directions.NORTH
-                prevMove = "north"
-                return move
-
-        # NORTH
-        if (posicionPacMan[1] < posicionFantasma[1]):
-            if(prevMove == "south" and Directions.SOUTH in legal):
-                move = Directions.SOUTH
-                prevMove = "south"
-                return move
-            if(Directions.NORTH in legal and prevMove != "south"):
-                move = Directions.NORTH
-                prevMove = "north"
-                return move
-            if(prevMove == "west" and Directions.WEST in legal):
-                move = Directions.WEST
-                prevMove = "west"
-                return move
-            if(Directions.EAST in legal and prevMove != "west"):
-                move = Directions.EAST
-                prevMove = "east"
-                return move
-            elif(Directions.WEST in legal):
-                move = Directions.WEST
-                prevMove = "west"
-                return move
-            elif(Directions.SOUTH in legal):
-                move = Directions.SOUTH
-                prevMove = "south"
-                return move
-
-        # EAST
-        if (posicionPacMan[0] < posicionFantasma[0]):
-            if(prevMove == "west" and Directions.WEST in legal):
-                move = Directions.WEST
-                prevMove = "west"
-                return move
-            if(Directions.EAST in legal and prevMove != "west"):
-                move = Directions.EAST
-                prevMove = "east"
-                return move
-            if(prevMove == "north" and Directions.NORTH in legal):
-                move = Directions.NORTH
-                prevMove = "north"
-                return move
-            if(Directions.SOUTH in legal and prevMove != "north"):
-                move = Directions.SOUTH
-                prevMove = "south"
-                return move
-            elif(Directions.NORTH in legal):
-                move = Directions.NORTH
-                prevMove = "north"
-                return move
-            elif(Directions.WEST in legal):
-                move = Directions.WEST
-                prevMove = "west"
-                return move
-
-        # SOUTH
-        if (posicionPacMan[1] > posicionFantasma[1]):
-            if(prevMove == "north" and Directions.NORTH in legal):
-                move = Directions.NORTH
-                prevMove = "north"
-                return move
-            if(Directions.SOUTH in legal and prevMove != "north"):
-                move = Directions.SOUTH
-                prevMove = "south"
-                return move
-            if(Directions.WEST in legal and prevMove == "west"):
-                move = Directions.WEST
-                prevMove = "west"
-                return move
-            if(Directions.EAST in legal and prevMove != "west"):
-                move = Directions.EAST
-                prevMove = "east"
-                return move
-            elif(Directions.WEST in legal):
-                move = Directions.WEST
-                prevMove = "west"
-                return move
-            elif(Directions.NORTH in legal):
-                move = Directions.NORTH
-                prevMove = "north"
-                return move
-
-        # WEST
-        if (posicionPacMan[0] > posicionFantasma[0]):
-            if(Directions.EAST in legal and prevMove == "east"):
-                move = Directions.EAST
-                prevMove = "east"
-                return move
-            if(Directions.WEST in legal and prevMove != "east"):
-                move = Directions.WEST
-                prevMove = "west"
-                return move
-            if(prevMove == "south" and Directions.SOUTH in legal):
-                move = Directions.SOUTH
-                prevMove = "south"
-                return move
-            if(Directions.NORTH in legal and prevMove != "south"):
-                move = Directions.NORTH
-                prevMove = "north"
-                return move
-            elif(Directions.SOUTH in legal):
-                move = Directions.SOUTH
-                prevMove = "south"
-                return move
-            elif(Directions.EAST in legal):
-                move = Directions.EAST
-                prevMove = "east"
-                return move
+    def dotDistance(self, gameState):
+        msg = -1
+        if gameState.getDistanceNearestFood() != None:
+            msg = gameState.getDistanceNearestFood()
+        return msg
 
     def printLineData(self, gameState):
         msg = ""

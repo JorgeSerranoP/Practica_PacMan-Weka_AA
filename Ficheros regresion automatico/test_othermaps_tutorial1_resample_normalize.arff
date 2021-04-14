@@ -1,0 +1,199 @@
+@relation stateData-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.supervised.instance.Resample-B1.0-S1-Z100.0-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+
+@attribute living_ghost1 {True,False}
+@attribute living_ghost2 {True,False}
+@attribute living_ghost3 {True,False}
+@attribute living_ghost4 {True,False}
+@attribute ghost_posX1 numeric
+@attribute ghost_posY1 numeric
+@attribute ghost_posX2 numeric
+@attribute ghost_posY2 numeric
+@attribute ghost_posX3 numeric
+@attribute ghost_posY3 numeric
+@attribute ghost_posX4 numeric
+@attribute ghost_posY4 numeric
+@attribute ghost_dir1 {North,South,West,East,Stop}
+@attribute ghost_dir2 {North,South,West,East,Stop}
+@attribute ghost_dir3 {North,South,West,East,Stop}
+@attribute ghost_dir4 {North,South,West,East,Stop}
+@attribute ghost_dist1 numeric
+@attribute ghost_dist2 numeric
+@attribute ghost_dist3 numeric
+@attribute ghost_dist4 numeric
+@attribute dot_dist numeric
+@attribute score numeric
+@attribute nextScore numeric
+@attribute pacman_posX numeric
+@attribute pacman_posY numeric
+@attribute pacman_dir {North,South,West,East,Stop}
+@attribute pacman_action {North,South,West,East,Stop}
+
+@data
+False,False,True,True,0,0,0.2,0,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0,0.392857,0.514286,0,0.211432,0.211432,0.416667,0.5625,North,North
+True,False,False,False,1,0.555556,0.2,0,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.411765,0,0,0,0.3,0.321865,0.321865,0.291667,0.125,West,North
+False,False,True,True,0,0,0.2,0,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0,0.285714,0.657143,0,0.214206,0.214206,0.416667,0.25,North,North
+False,False,True,False,0,0,0.2,0,0.25,0.25,0.217391,0,Stop,Stop,West,Stop,0,0,0.107143,0,0,0.333518,0.333518,0.125,0.125,East,North
+True,False,False,False,1,0.555556,0.2,0,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.352941,0,0,0,0.4,0.32131,0.32131,0.291667,0.1875,North,North
+False,False,True,True,0,0,0.2,0,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0,0.285714,0.6,0,0.213097,0.213097,0.416667,0.375,North,North
+False,False,True,True,0,0,0.2,0,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0,0.321429,0.685714,0,0.214761,0.214761,0.416667,0.1875,North,North
+False,False,False,True,0.25,0,0.2,0,0.0625,0,0.478261,0.166667,West,West,West,West,0,0,0,0.171429,0,0.887347,0.887347,0.333333,0.0625,North,North
+True,False,False,False,1,0.555556,0.2,0,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.352941,0,0,0,0.4,0.32131,0.32131,0.291667,0.1875,North,North
+True,False,False,False,1,0.555556,0.2,0,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.529412,0,0,0,0.4,0.322974,0.322974,0.375,0.125,South,North
+True,False,False,True,0.25,1,0.2,0,0.25,0,0.043478,0.666667,West,Stop,Stop,North,0.235294,0,0,0.142857,0.2,0.281909,0.337403,0,0.4375,North,North
+False,False,False,True,0,0,0.2,0,0.25,0,1,1,Stop,Stop,Stop,Stop,0,0,0,0.057143,0,0.306881,0.417869,1,0.6875,East,North
+True,False,True,True,0.5,1,0.2,0,0,0.583333,0,0.666667,East,Stop,Stop,East,0.352941,0,0.071429,0.142857,0.3,0.171476,0.282464,0,0.375,North,North
+False,False,True,True,0,0,0.2,0,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0,0.285714,0.6,0,0.213097,0.213097,0.416667,0.375,North,North
+False,False,True,True,0,0,0.2,0,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0,0.357143,0.542857,0,0.211987,0.211987,0.416667,0.5,North,North
+False,False,False,True,0,0,0.2,0,0.25,0,1,1,Stop,Stop,Stop,Stop,0,0,0,0.142857,0,0.308546,0.308546,0.958333,0.5625,North,North
+False,False,False,True,0,0,0.2,0,0.25,0,1,1,Stop,Stop,Stop,Stop,0,0,0,0.142857,0,0.308546,0.308546,0.958333,0.5625,North,North
+False,False,True,True,0,0,0.2,0,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0,0.321429,0.685714,0,0.214761,0.214761,0.416667,0.1875,North,North
+True,False,True,True,1,0.555556,0.2,0,0.4375,1,0.391304,0.75,Stop,Stop,Stop,Stop,0.529412,0,0.107143,0.2,0.4,0.113208,0.113208,0.25,0.6875,North,North
+False,False,True,True,0,0,0.2,0,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0,0.321429,0.685714,0,0.214761,0.214761,0.416667,0.1875,North,North
+True,False,False,False,1,0.555556,0.2,0,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.352941,0,0,0,0.4,0.32131,0.32131,0.291667,0.1875,North,North
+False,False,False,True,0,0,0.2,0,0.25,0,1,1,Stop,Stop,Stop,Stop,0,0,0,0.257143,0,0.310766,0.310766,0.958333,0.3125,East,North
+False,False,True,False,0,0,0.2,0,0.3125,0.25,0.217391,0,Stop,Stop,East,Stop,0,0,0.214286,0,0,0.335738,0.335738,0.041667,0.125,West,North
+False,False,False,True,0,0,0.2,0,0.25,0,1,1,Stop,Stop,Stop,Stop,0,0,0,0.171429,0,0.309101,0.309101,0.958333,0.5,North,North
+False,False,True,True,0,0,0.2,0,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0,0.285714,0.657143,0,0.214206,0.214206,0.416667,0.25,North,North
+False,False,False,True,0,0,0.2,0,0.25,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0,0,0,0.2,0,0.99889,0.99889,0.333333,0,East,North
+True,False,False,False,1,0.555556,0.2,0,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.529412,0,0,0,0.4,0.322974,0.322974,0.375,0.125,South,North
+False,False,True,False,0,0,0.2,0,0.3125,0.25,0.217391,0,Stop,Stop,North,Stop,0,0,0.178571,0,0,0.334073,0.334073,0.083333,0.125,South,North
+False,False,False,True,0,0,0.2,0,0.25,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0,0,0,0.171429,0,0.998335,0.998335,0.333333,0.0625,North,North
+False,False,False,True,0,0,0.2,0,0.25,0,1,1,Stop,Stop,Stop,Stop,0,0,0,0.142857,0,0.308546,0.308546,0.958333,0.5625,North,North
+False,False,False,True,0,0,0.2,0,0.25,0,1,1,Stop,Stop,Stop,Stop,0,0,0,0.2,0,0.309656,0.309656,0.958333,0.4375,North,North
+False,False,False,True,0,0,0.2,0,0.25,0,1,1,Stop,Stop,Stop,Stop,0,0,0,0.057143,0,0.306881,0.417869,1,0.6875,East,North
+True,True,True,False,0.25,0.222222,0.1,0.2,0.1875,0.25,0.217391,0,West,South,North,Stop,0.235294,0.16,0.107143,0,0,0.115427,0.115427,0.166667,0.125,South,North
+True,False,False,False,1,0.555556,0.2,0,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.352941,0,0,0,0.4,0.32131,0.32131,0.291667,0.1875,North,North
+True,True,True,False,0.25,0.333333,0.1,0.3,0.1875,0.25,0.217391,0,North,East,North,Stop,0.352941,0.24,0.142857,0,0,0.117092,0.117092,0.208333,0.125,West,North
+False,False,False,True,0,0,0.2,0,0.25,0,1,1,Stop,Stop,Stop,Stop,0,0,0,0.257143,0,0.310766,0.310766,0.958333,0.3125,East,North
+True,False,True,True,1,0.555556,0.2,0,0.4375,1,0.391304,0.75,Stop,Stop,Stop,Stop,0.529412,0,0.107143,0.2,0.4,0.113208,0.113208,0.25,0.6875,North,North
+True,False,False,True,0.25,1,0.2,0,0.25,0,0.043478,0.666667,West,Stop,Stop,North,0.235294,0,0,0.142857,0.2,0.281909,0.337403,0,0.4375,North,North
+True,False,True,True,1,0.555556,0.2,0,0.4375,1,0.391304,0.75,Stop,Stop,Stop,Stop,0.470588,0,0.142857,0.171429,0.3,0.113762,0.113762,0.25,0.625,East,North
+False,False,False,True,0,0,0.2,0,0.25,0,1,1,Stop,Stop,Stop,Stop,0,0,0,0.2,0,0.309656,0.309656,0.958333,0.4375,North,North
+False,False,False,True,0,0,0.2,0,0.25,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0,0,0,0.171429,0,0.998335,0.998335,0.333333,0.0625,North,North
+True,False,False,False,1,0.555556,0.2,0,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.352941,0,0,0,0.4,0.32131,0.32131,0.291667,0.1875,North,North
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.529412,0.76,0.785714,0.771429,0,0.00333,0.00333,0,0.625,South,South
+True,True,True,True,1,0.555556,0.5,1,0.4375,1,0.391304,0.75,Stop,Stop,Stop,Stop,0.647059,0.28,0.321429,0.371429,0.8,0.006659,0.006659,0,0.6875,South,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.529412,0.76,0.785714,0.771429,0,0.00333,0.00333,0,0.625,South,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.352941,0.64,0.678571,0.857143,0,0.001665,0.001665,0,0.4375,South,South
+True,True,True,True,0,0.111111,0.2,0,0.1875,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0.117647,0,0,0.428571,0.3,0.005549,0.116537,0,0.125,West,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.235294,0.56,0.607143,0.914286,0,0.000555,0.000555,0,0.3125,South,South
+False,False,True,False,0,0,0.2,0,0.25,0.166667,0.217391,0,Stop,Stop,Stop,Stop,0,0,0.071429,0,0,0.332408,0.443396,0.166667,0.1875,East,South
+True,True,True,True,0.25,0,0.3,0,0.1875,0,0.521739,0.166667,East,West,East,West,0,0,0,0.4,0.2,0.004994,0.060488,0,0.0625,South,South
+True,False,False,False,1,0.555556,0.2,0,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.411765,0,0,0,0.2,0.324084,0.379578,0.375,0.25,South,South
+True,False,False,False,1,0.555556,0.2,0,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.352941,0,0,0,0.2,0.324639,0.380133,0.375,0.3125,South,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.470588,0.72,0.75,0.8,0,0.002775,0.002775,0,0.5625,South,South
+True,False,False,False,1,0.555556,0.2,0,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.470588,0,0,0,0.3,0.323529,0.323529,0.375,0.1875,South,South
+True,True,True,True,0,0.222222,0,0.3,0.1875,0.166667,0.173913,0.166667,Stop,Stop,Stop,Stop,0.470588,0.28,0.178571,0.085714,0,0.007214,0.007214,0.25,0.1875,Stop,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.882353,1,1,0.828571,0,0.006659,0.006659,0,1,South,South
+True,True,True,True,1,0.555556,0.5,1,0.4375,1,0.391304,0.75,Stop,Stop,Stop,Stop,0.705882,0.32,0.285714,0.4,0.9,0.007214,0.007214,0,0.75,Stop,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.647059,0.84,0.857143,0.714286,0,0.00444,0.00444,0,0.75,South,South
+True,False,False,True,1,0.555556,0.2,0,0.25,0,0.391304,0.75,Stop,Stop,Stop,Stop,0.882353,0,0,0.142857,0.8,0.218646,0.218646,0.541667,0.625,South,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.470588,0.72,0.75,0.8,0,0.002775,0.002775,0,0.5625,South,South
+False,False,True,True,0,0,0.2,0,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0,0.25,0.514286,0,0.206992,0.206992,0.5,0.4375,South,South
+False,False,True,True,0,0,0.2,0,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0,0.357143,0.428571,0,0.208657,0.208657,0.5,0.625,South,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.470588,0.72,0.75,0.8,0,0.002775,0.002775,0,0.5625,South,South
+False,False,True,True,0,0,0.2,0,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0,0.357143,0.428571,0,0.208657,0.208657,0.5,0.625,South,South
+False,False,True,True,0,0,0.2,0,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0,0.25,0.514286,0,0.206992,0.206992,0.5,0.4375,South,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.352941,0.64,0.678571,0.857143,0,0.001665,0.001665,0,0.4375,South,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.352941,0.64,0.678571,0.857143,0,0.001665,0.001665,0,0.4375,South,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.588235,0.8,0.821429,0.742857,0,0.003885,0.003885,0,0.6875,South,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.411765,0.68,0.714286,0.828571,0,0.00222,0.00222,0,0.5,South,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.588235,0.8,0.821429,0.742857,0,0.003885,0.003885,0,0.6875,South,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.411765,0.68,0.714286,0.828571,0,0.00222,0.00222,0,0.5,South,South
+True,False,False,True,1,0.555556,0.2,0,0.25,0,0.391304,0.75,Stop,Stop,Stop,Stop,1,0,0,0.2,1,0.219756,0.219756,0.541667,0.75,East,South
+True,False,False,False,1,0.555556,0.2,0,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.352941,0,0,0,0.2,0.324639,0.380133,0.375,0.3125,South,South
+True,True,True,True,0,0.111111,0.2,0,0.1875,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0.117647,0,0,0.428571,0.3,0.005549,0.116537,0,0.125,West,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.588235,0.8,0.821429,0.742857,0,0.003885,0.003885,0,0.6875,South,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.176471,0.52,0.642857,0.942857,0,0,0,0,0.25,South,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.235294,0.56,0.607143,0.914286,0,0.000555,0.000555,0,0.3125,South,South
+False,True,True,True,0,0,0.2,0,0.1875,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0,0,0,0.4,0.2,0.115982,0.171476,0,0.0625,South,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.176471,0.52,0.642857,0.942857,0,0,0,0,0.25,South,South
+True,True,True,True,0.25,0,0.3,0,0.1875,0,0.521739,0.166667,East,West,East,West,0,0,0,0.4,0.2,0.004994,0.060488,0,0.0625,South,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.823529,0.96,0.964286,0.8,0,0.006104,0.006104,0,0.9375,South,South
+False,False,True,True,0,0,0.2,0,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0,0.25,0.514286,0,0.206992,0.206992,0.5,0.4375,South,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.411765,0.68,0.714286,0.828571,0,0.00222,0.00222,0,0.5,South,South
+True,True,True,True,0,0.222222,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0.705882,0.88,0.892857,0.742857,0,0.004994,0.004994,0,0.8125,South,South
+True,False,False,False,1,0.555556,0.2,0,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.235294,0,0,0,0.4,0.3202,0.3202,0.291667,0.3125,North,West
+True,True,True,False,0.5,0.222222,0,0.2,0.1875,0.25,0.217391,0,Stop,West,North,Stop,0.117647,0.16,0.071429,0,0,0.114872,0.22586,0.125,0.125,West,West
+True,True,False,False,0,0.222222,0,0.3,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.176471,0.16,0,0,0,0.226415,0.226415,0.083333,0.125,West,West
+True,False,False,False,1,0.555556,0.2,0,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.117647,0,0,0,0.4,0.31909,0.430078,0.208333,0.3125,West,West
+True,True,True,True,0,0.222222,0,0.3,0.1875,0.166667,0.173913,0.166667,Stop,Stop,Stop,Stop,0.411765,0.32,0.142857,0.057143,0,0.006659,0.117647,0.25,0.125,South,West
+True,False,False,True,1,0.555556,0.2,0,0.25,0,0.391304,0.75,Stop,Stop,Stop,Stop,0.705882,0,0,0.057143,0.5,0.216981,0.327969,0.458333,0.5625,West,West
+True,True,True,False,0,0.222222,0,0.3,0.1875,0.166667,0.217391,0,Stop,Stop,Stop,Stop,0.294118,0.24,0.071429,0,0,0.116537,0.227525,0.166667,0.125,West,West
+False,True,True,False,0,0,0,0.2,0.25,0.25,0.217391,0,Stop,West,East,Stop,0,0.12,0.142857,0,0,0.225305,0.225305,0.083333,0.125,West,West
+True,True,True,True,0,0.111111,0.2,0,0.1875,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0.235294,0,0,0.371429,0.4,0.006659,0.006659,0.083333,0.125,West,West
+True,True,True,False,0.5,0.333333,0,0.3,0.1875,0.25,0.217391,0,East,West,North,Stop,0.235294,0.24,0.107143,0,0,0.116537,0.116537,0.208333,0.1875,North,West
+True,True,True,False,0.5,0.222222,0,0.2,0.1875,0.25,0.217391,0,Stop,West,North,Stop,0.117647,0.16,0.071429,0,0,0.114872,0.22586,0.125,0.125,West,West
+True,False,False,True,1,0.555556,0.2,0,0.25,0,0.391304,0.75,Stop,Stop,Stop,Stop,0.764706,0,0,0.085714,0.6,0.217536,0.217536,0.5,0.5625,West,West
+True,True,True,True,0,0.111111,0.2,0,0.1875,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0.294118,0,0,0.342857,0.5,0.007214,0.007214,0.125,0.125,Stop,West
+True,True,True,True,0,0,0.3,0,0.125,0,0.521739,0.083333,South,East,West,South,0,0,0,0,0.4,0.006659,0.006659,0.083333,0.125,West,West
+True,False,False,False,1,0.555556,0.2,0,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.470588,0,0,0,0.4,0.32242,0.32242,0.333333,0.125,West,West
+True,False,False,True,1,0.555556,0.2,0,0.25,0,0.391304,0.75,Stop,Stop,Stop,Stop,0.705882,0,0,0.057143,0.5,0.216981,0.327969,0.458333,0.5625,West,West
+True,False,False,True,1,0.555556,0.2,0,0.25,0,0.391304,0.75,Stop,Stop,Stop,Stop,0.705882,0,0,0.057143,0.5,0.216981,0.327969,0.458333,0.5625,West,West
+True,False,False,True,1,0.555556,0.2,0,0.25,0,0.391304,0.75,Stop,Stop,Stop,Stop,0.823529,0,0,0.114286,0.7,0.218091,0.218091,0.541667,0.5625,South,West
+False,True,True,False,0,0,0,0.2,0.25,0.25,0.217391,0,Stop,West,East,Stop,0,0.12,0.142857,0,0,0.225305,0.225305,0.083333,0.125,West,West
+True,True,True,True,0,0.222222,0,0.3,0.1875,0.166667,0.173913,0.166667,Stop,Stop,Stop,Stop,0.411765,0.32,0.142857,0.057143,0,0.006659,0.117647,0.25,0.125,South,West
+False,True,True,False,0,0,0,0.2,0.25,0.25,0.217391,0,Stop,West,East,Stop,0,0.12,0.142857,0,0,0.225305,0.225305,0.083333,0.125,West,West
+True,True,True,True,0,0.111111,0.2,0,0.1875,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0.294118,0,0,0.342857,0.5,0.007214,0.007214,0.125,0.125,Stop,West
+True,True,False,False,0,0.222222,0,0.3,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.117647,0.12,0,0,0,0.22586,0.336848,0.041667,0.125,West,West
+True,True,True,True,0,0.111111,0.2,0,0.1875,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0.176471,0,0,0.4,0.3,0.006104,0.006104,0.041667,0.125,West,West
+True,True,True,True,0,0.111111,0.2,0,0.1875,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0.176471,0,0,0.4,0.3,0.006104,0.006104,0.041667,0.125,West,West
+True,False,False,False,1,0.555556,0.2,0,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.647059,0,0,0,0.4,0.327414,0.327414,0.416667,0.5625,West,West
+True,True,True,True,0,0.222222,0,0.3,0.1875,0.166667,0.173913,0.166667,Stop,Stop,Stop,Stop,0.411765,0.32,0.142857,0.057143,0,0.006659,0.117647,0.25,0.125,South,West
+True,True,True,False,0.5,0.333333,0,0.3,0.1875,0.25,0.217391,0,East,West,North,Stop,0.235294,0.24,0.107143,0,0,0.116537,0.116537,0.208333,0.1875,North,West
+True,False,False,False,1,0.555556,0.2,0,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.117647,0,0,0,0.4,0.31909,0.430078,0.208333,0.3125,West,West
+True,False,False,True,1,0.555556,0.2,0,0.25,0,0.391304,0.75,Stop,Stop,Stop,Stop,0.764706,0,0,0.085714,0.6,0.217536,0.217536,0.5,0.5625,West,West
+True,True,True,False,0,0.222222,0,0.3,0.1875,0.166667,0.217391,0,Stop,Stop,Stop,Stop,0.294118,0.24,0.071429,0,0,0.116537,0.227525,0.166667,0.125,West,West
+True,False,False,False,1,0.555556,0.2,0,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.176471,0,0,0,0.4,0.319645,0.319645,0.25,0.3125,West,West
+True,False,False,True,1,0.555556,0.2,0,0.25,0,0.391304,0.75,Stop,Stop,Stop,Stop,0.764706,0,0,0.085714,0.6,0.217536,0.217536,0.5,0.5625,West,West
+True,False,False,True,1,0.555556,0.2,0,0.25,0,0.391304,0.75,Stop,Stop,Stop,Stop,0.764706,0,0,0.085714,0.6,0.217536,0.217536,0.5,0.5625,West,West
+True,True,False,False,0,0.222222,0,0.3,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.235294,0.2,0,0,0,0.22697,0.22697,0.125,0.125,West,West
+True,True,True,True,0,0,0.3,0,0.125,0,0.521739,0.083333,South,East,West,South,0,0,0,0,0.4,0.006659,0.006659,0.083333,0.125,West,West
+True,False,False,True,1,0.555556,0.2,0,0.25,0,0.391304,0.75,Stop,Stop,Stop,Stop,0.823529,0,0,0.114286,0.7,0.218091,0.218091,0.541667,0.5625,South,West
+True,True,False,False,0,0.222222,0,0.3,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.176471,0.16,0,0,0,0.226415,0.226415,0.083333,0.125,West,West
+True,True,True,True,0,0.111111,0.3,0,0.1875,0,0.521739,0,North,East,East,North,0.176471,0,0,0.4,0.3,0.006104,0.006104,0.041667,0.125,West,West
+True,True,True,False,0.5,0.333333,0,0.3,0.1875,0.25,0.217391,0,East,West,North,Stop,0.235294,0.24,0.107143,0,0,0.116537,0.116537,0.208333,0.1875,North,West
+True,True,False,False,0,0.222222,0,0.3,0.25,0,0.217391,0,Stop,Stop,Stop,Stop,0.117647,0.12,0,0,0,0.22586,0.336848,0.041667,0.125,West,West
+True,False,False,True,1,0.555556,0.2,0,0.25,0,0.391304,0.75,Stop,Stop,Stop,Stop,0.823529,0,0,0.114286,0.7,0.218091,0.218091,0.541667,0.5625,South,West
+False,False,False,True,0,0,0.2,0,0.25,0,1,1,Stop,Stop,Stop,Stop,0,0,0,0.085714,0,0.307436,0.307436,0.958333,0.6875,North,East
+True,False,False,False,0.25,1,0.2,0,0.25,0,0,0.75,Stop,Stop,Stop,Stop,0.117647,0,0,0,0.4,0.447281,0.558269,0,0.5625,North,East
+False,False,True,True,0,0,0.2,0,0.1875,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0,0,0,0.371429,0,0.669256,0.669256,0.083333,0,East,East
+False,True,True,True,0,0,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0.36,0.642857,0.942857,0,0.108768,0.108768,0.083333,0.125,East,East
+False,False,False,True,0,0,0.2,0,0.25,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0,0,0,0.114286,0,0.996115,0.996115,0.458333,0.125,East,East
+False,False,True,True,0,0,0.2,0,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0,0.142857,0.542857,0,0.205327,0.205327,0.541667,0.3125,East,East
+True,False,False,True,1,0.555556,0.2,0,0.25,0,0.391304,0.75,Stop,Stop,Stop,Stop,0.941176,0,0,0.171429,0.9,0.220311,0.220311,0.5,0.75,East,East
+False,False,True,True,0,0,0.2,0,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0,0.428571,0.428571,0,0.209767,0.209767,0.458333,0.6875,East,East
+False,False,False,True,0,0.111111,0,0,0.1875,0,0.434783,0.166667,North,West,East,East,0.647059,0,0,0.114286,0,0.886238,0.886238,0.375,0.125,East,East
+False,False,False,True,0,0,0.2,0,0.25,0,1,1,Stop,Stop,Stop,Stop,0,0,0,0.285714,0,0.311321,0.311321,0.916667,0.3125,East,East
+False,False,False,True,0,0,0.2,0,0.25,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0,0,0,0.257143,0,1,1,0.25,0,East,East
+False,False,False,True,0,0,0.2,0,0.25,0,1,1,Stop,Stop,Stop,Stop,0,0,0,0.4,0,0.313541,0.313541,0.75,0.3125,East,East
+False,True,True,True,0,0,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0.16,0.464286,0.8,0,0.105993,0.105993,0.291667,0.125,East,East
+False,True,False,True,0,0,0.6,0,0.25,0,0.521739,0.166667,West,East,Stop,West,0,0,0,0.342857,0,0.446726,0.446726,0.125,0,East,East
+False,False,False,True,0,0,0.2,0,0.25,0,1,1,Stop,Stop,Stop,Stop,0,0,0,0.371429,0,0.312986,0.312986,0.791667,0.3125,East,East
+False,False,True,True,0,0,0.2,0,0.1875,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0,0,0,0.371429,0,0.669256,0.669256,0.083333,0,East,East
+False,False,False,True,0,0,0.2,0,0.25,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0,0,0,0.228571,0,0.999445,0.999445,0.291667,0,East,East
+True,True,True,True,1,0.555556,0.5,1,0.4375,1,0.391304,0.75,Stop,Stop,Stop,Stop,0.470588,0.16,0.285714,0.285714,0.5,0.004994,0.004994,0.083333,0.625,East,East
+False,True,False,True,0,0,0.5,0,0.3125,0,0.478261,0.166667,West,Stop,Stop,West,0,0,0,0.314286,0,0.557159,0.557159,0.166667,0,East,East
+False,False,False,True,0,0,0.2,0,0.25,0,1,1,Stop,Stop,Stop,Stop,0,0,0,0.371429,0,0.312986,0.312986,0.791667,0.3125,East,East
+False,False,False,True,0,0,0.2,0,0.25,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0,0,0,0.257143,0,1,1,0.25,0,East,East
+False,True,True,True,0,0,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0.16,0.464286,0.8,0,0.105993,0.105993,0.291667,0.125,East,East
+False,True,False,True,0,0,0.6,0,0.25,0,0.521739,0.166667,West,East,Stop,West,0,0,0,0.342857,0,0.446726,0.446726,0.125,0,East,East
+False,False,True,True,0,0,0.2,0,0.1875,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0,0,0,0.371429,0,0.669256,0.669256,0.083333,0,East,East
+True,True,True,True,1,0.555556,0.5,1,0.4375,1,0.391304,0.75,Stop,Stop,Stop,Stop,0.352941,0.08,0.214286,0.228571,0.3,0.003885,0.114872,0.166667,0.625,East,East
+False,False,False,True,0,0,0.2,0,0.25,0,0.478261,0.166667,West,Stop,Stop,East,0,0,0,0.314286,0,0.889567,0.889567,0.208333,0,East,East
+False,True,True,True,0,0,0.2,0,0.1875,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0,0,0,0.4,0,0.447836,0.447836,0.041667,0,East,East
+False,False,False,True,0,0,0.2,0,0.25,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0,0,0,0.171429,0,0.997225,0.997225,0.375,0.125,East,East
+False,True,True,True,0,0,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0.28,0.571429,0.885714,0,0.107658,0.107658,0.166667,0.125,East,East
+False,True,True,True,0,0,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0.44,0.714286,1,0,0.109878,0.109878,0,0.125,South,East
+False,False,False,True,0,0,0.2,0,0.25,0,0.521739,0.083333,Stop,Stop,Stop,Stop,0,0,0,0.142857,0,0.99667,0.99667,0.416667,0.125,East,East
+False,False,False,True,0.5,0,0.2,0,0.125,0,0.478261,0.166667,East,West,West,East,0,0,0,0.257143,0,0.888457,0.888457,0.291667,0,East,East
+False,True,True,True,0,0,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0.28,0.571429,0.885714,0,0.107658,0.107658,0.166667,0.125,East,East
+False,True,True,True,0,0,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0.2,0.5,0.828571,0,0.106548,0.106548,0.25,0.125,East,East
+True,True,True,True,1,0.555556,0.5,1,0.4375,1,0.391304,0.75,Stop,Stop,Stop,Stop,0.352941,0.08,0.214286,0.228571,0.3,0.003885,0.114872,0.166667,0.625,East,East
+False,True,True,True,0,0,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0.44,0.714286,1,0,0.109878,0.109878,0,0.125,South,East
+False,True,False,True,0,0,0.5,0,0.3125,0,0.478261,0.166667,West,Stop,Stop,West,0,0,0,0.314286,0,0.557159,0.557159,0.166667,0,East,East
+False,False,True,True,0,0,0.2,0,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0,0.428571,0.428571,0,0.209767,0.209767,0.458333,0.6875,East,East
+True,True,True,True,1,0.555556,0.5,1,0.4375,1,0.391304,0.75,Stop,Stop,Stop,Stop,0.352941,0.08,0.214286,0.228571,0.3,0.003885,0.114872,0.166667,0.625,East,East
+False,True,True,True,0,0,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0.12,0.428571,0.771429,0,0.105438,0.105438,0.333333,0.125,East,East
+False,True,True,True,0,0,1,0.2,1,0.416667,1,1,Stop,Stop,Stop,Stop,0,0.12,0.428571,0.771429,0,0.105438,0.105438,0.333333,0.125,East,East
+True,False,False,True,1,0.555556,0.2,0,0.25,0,0.391304,0.75,Stop,Stop,Stop,Stop,0.705882,0,0,0.171429,0.7,0.222531,0.222531,0.333333,0.75,East,East
